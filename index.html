@@ -1,0 +1,419 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contrato Oficial de Amistad</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 30px 15px;
+    background: #fcecf2;
+    font-family: 'Segoe UI', sans-serif;
+    color: #44313b;
+}
+
+.contenedor {
+    max-width: 750px;
+    margin: auto;
+    background: white;
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0 8px 30px #00000015;
+}
+
+.encabezado {
+    text-align: center;
+    border-bottom: 2px solid #f2d5df;
+    padding-bottom: 20px;
+}
+
+.encabezado h1 {
+    color: #b84f78;
+    font-size: 27px;
+    margin-bottom: 8px;
+}
+
+.encabezado p {
+    color: #92717f;
+}
+
+.sello {
+    font-size: 42px;
+}
+
+h2 {
+    color: #b84f78;
+    font-size: 19px;
+    margin-top: 28px;
+}
+
+.intro {
+    line-height: 1.7;
+    text-align: justify;
+}
+
+.datos {
+    margin-top: 25px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #e8c7d5;
+    border-radius: 8px;
+    margin-top: 8px;
+    outline: none;
+    font-size: 15px;
+}
+
+.termino {
+    display: flex;
+    gap: 10px;
+    margin: 14px 0;
+    line-height: 1.5;
+    align-items: flex-start;
+}
+
+.termino input {
+    margin-top: 5px;
+    accent-color: #c35d86;
+}
+
+.firma {
+    margin-top: 25px;
+}
+
+canvas {
+    width: 100%;
+    height: 180px;
+    border: 2px dashed #d9a6bb;
+    border-radius: 10px;
+    background: #fffafd;
+    touch-action: none;
+    cursor: crosshair;
+    display: block;
+}
+
+.botones {
+    display: flex;
+    gap: 10px;
+    margin-top: 12px;
+    flex-wrap: wrap;
+}
+
+button {
+    border: none;
+    padding: 13px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.limpiar {
+    background: #f1e5eb;
+    color: #80566a;
+}
+
+.firmar {
+    background: #bd5d83;
+    color: white;
+    width: 100%;
+    margin-top: 25px;
+    transition: .2s;
+}
+
+.firmar:hover {
+    background: #a7476c;
+}
+
+.aviso {
+    text-align: center;
+    color: #a08090;
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+#felicitacion {
+    display: none;
+    text-align: center;
+    background: #fff0f5;
+    border: 2px solid #e6a9c1;
+    border-radius: 15px;
+    padding: 25px;
+    margin-top: 25px;
+}
+
+#felicitacion h2 {
+    color: #b84f78;
+    font-size: 24px;
+}
+
+.nombre-final {
+    font-weight: bold;
+    color: #b84f78;
+}
+
+@media(max-width: 500px) {
+    .contenedor {
+        padding: 22px;
+    }
+
+    .encabezado h1 {
+        font-size: 22px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="contenedor">
+
+    <div class="encabezado">
+        <div class="sello"></div>
+        <h1>CONTRATO OFICIAL DE AMISTAD</h1>
+        <p>Documento de incorporación al círculo de amistad</p>
+        <p><strong>Emisor:</strong> Giovanni Riveros</p>
+    </div>
+
+    <h2>PRIMERO: OBJETIVO DEL CONTRATO</h2>
+
+    <p class="intro">
+        Mediante el presente documento, Giovanni Riveros ofrece
+        formalmente una oportunidad de amistad a la persona que
+        suscriba este contrato. La aceptación implica el compromiso
+        de construir una amistad basada en la confianza, el respeto,
+        el cariño, las risas y el apoyo mutuo.
+    </p>
+
+    <div class="datos">
+        <label><strong>Nombre:</strong></label>
+        <input type="text" id="nombre"
+        placeholder="Escriba su nombre aquí">
+    </div>
+
+    <h2>SEGUNDO: TÉRMINOS Y CONDICIONES</h2>
+
+    <p>La persona firmante se compromete voluntariamente a cumplir con lo siguiente:</p>
+
+    <div class="termino">
+        <input type="checkbox" class="condicion">
+        <span>Escuchar y brindar apoyo cuando me se sienta mal o necesito desahogarse.</span>
+    </div>
+
+    <div class="termino">
+        <input type="checkbox" class="condicion">
+        <span>Tenerme paciencia, incluso cuando esté insoportable o tenga uno de sus días especiales.</span>
+    </div>
+
+    <div class="termino">
+        <input type="checkbox" class="condicion">
+        <span>Soportar mis chistes con doble sentido. Se advierte que me hago responsable de las risas inesperadas.</span>
+    </div>
+
+    <div class="termino">
+        <input type="checkbox" class="condicion">
+        <span>Mantener la confianza y seguridad.</span>
+    </div>
+
+    <div class="termino">
+        <input type="checkbox" class="condicion">
+        <span>Aceptar memes, reels, videos y mensajes aleatorios que probablemente no tengan ningún sentido.</span>
+    </div>
+
+    <div class="termino">
+        <input type="checkbox" class="condicion">
+        <span>Ser sincera y comunicar cuando algo le moleste, evitando malos entendidos innecesarios.</span>
+    </div>
+
+    <div class="termino">
+        <input type="checkbox" class="condicion">
+        <span>No desaparecer por completo sin explicación. Se permite tener vida propia, ocupaciones y momentos de desconexión.</span>
+    </div>
+
+    <div class="termino">
+        <input type="checkbox" class="condicion">
+        <span>Estar dispuesta a mantener conversaciones profundas y también conversaciones completamente absurdas.</span>
+    </div>
+
+    <div class="termino">
+        <input type="checkbox" class="condicion">
+        <span>No abandonar la amistad por discusiones tontas. Siempre se intentará solucionar las cosas hablando.</span>
+    </div>
+
+    <div class="termino">
+        <input type="checkbox" class="condicion">
+        <span>Recordar que la amistad es mutua y que yo también me comprometo a escuchar, apoyar, respetar y estar presente.</span>
+    </div>
+
+    <h2>TERCERO: DURACIÓN DEL CONTRATO</h2>
+
+    <p class="intro">
+        Este contrato no tiene fecha de vencimiento. Su duración
+        dependerá de la confianza, el respeto y las ganas de ambas
+        personas de conservar esta bonita amistad.
+    </p>
+
+    <h2>CUARTO: FIRMA DE ACEPTACIÓN</h2>
+
+    <p class="intro">
+        Si está de acuerdo con las condiciones anteriores,
+        proceda a realizar su firma en el siguiente recuadro.
+    </p>
+
+    <div class="firma">
+        <label><strong>Firma</strong></label>
+        <canvas id="canvas"></canvas>
+
+        <div class="botones">
+            <button class="limpiar" onclick="limpiarFirma()">
+                Borrar firma
+            </button>
+        </div>
+    </div>
+
+    <button class="firmar" onclick="firmarContrato()">
+        ✍️ FIRMAR CONTRATO DE AMISTAD
+    </button>
+
+    <p class="aviso">
+        Documento simbólico de amistad. No constituye un contrato legal.
+    </p>
+
+    <div id="felicitacion">
+        <div style="font-size:50px;">🎉💗</div>
+
+        <h2>¡FELICITACIONES!</h2>
+
+        <p>
+            <strong class="nombre-final" id="nombreResultado"></strong>,
+            has firmado exitosamente el contrato.
+        </p>
+
+        <p>
+            A partir de este momento has formado oficialmente
+            una amistad con <strong>Giovanni Riveros</strong>.
+        </p>
+
+        <h3>🤝 ¡BIENVENIDA A ESTA AMISTAD!</h3>
+
+        <p>
+            Por favor, saque una captura de pantalla de este
+            documento y envíesela al emisor como comprobante.
+        </p>
+
+        <p><strong>Atentamente: Giovanni Riveros.</strong></p>
+    </div>
+
+</div>
+
+<script>
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+
+let dibujando = false;
+let tieneFirma = false;
+
+function ajustarCanvas() {
+    const rect = canvas.getBoundingClientRect();
+    const imagen = tieneFirma ? canvas.toDataURL() : null;
+
+    canvas.width = rect.width * window.devicePixelRatio;
+    canvas.height = rect.height * window.devicePixelRatio;
+
+    ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
+    ctx.lineWidth = 2.5;
+    ctx.lineCap = "round";
+    ctx.lineJoin = "round";
+    ctx.strokeStyle = "#9f4168";
+
+    if (imagen) {
+        const img = new Image();
+        img.onload = () => {
+            ctx.drawImage(img, 0, 0, rect.width, rect.height);
+        };
+        img.src = imagen;
+    }
+}
+
+ajustarCanvas();
+
+function posicion(e) {
+    const rect = canvas.getBoundingClientRect();
+    return {
+        x: e.clientX - rect.left,
+        y: e.clientY - rect.top
+    };
+}
+
+canvas.addEventListener("pointerdown", (e) => {
+    dibujando = true;
+    canvas.setPointerCapture(e.pointerId);
+
+    const p = posicion(e);
+    ctx.beginPath();
+    ctx.moveTo(p.x, p.y);
+});
+
+canvas.addEventListener("pointermove", (e) => {
+    if (!dibujando) return;
+
+    const p = posicion(e);
+    ctx.lineTo(p.x, p.y);
+    ctx.stroke();
+
+    tieneFirma = true;
+});
+
+canvas.addEventListener("pointerup", () => {
+    dibujando = false;
+});
+
+canvas.addEventListener("pointercancel", () => {
+    dibujando = false;
+});
+
+function limpiarFirma() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    tieneFirma = false;
+}
+
+function firmarContrato() {
+    const nombre = document.getElementById("nombre").value.trim();
+    const condiciones = document.querySelectorAll(".condicion");
+
+    if (!nombre) {
+        alert("Por favor, ingrese su nombre.");
+        return;
+    }
+
+    if (!Array.from(condiciones).every(c => c.checked)) {
+        alert("Debe aceptar todos los términos y condiciones.");
+        return;
+    }
+
+    if (!tieneFirma) {
+        alert("Debe realizar su firma antes de continuar.");
+        return;
+    }
+
+    document.getElementById("nombreResultado").textContent = nombre;
+
+    document.getElementById("felicitacion").style.display = "block";
+
+    document.getElementById("felicitacion").scrollIntoView({
+        behavior: "smooth"
+    });
+}
+</script>
+
+</body>
+</html>
